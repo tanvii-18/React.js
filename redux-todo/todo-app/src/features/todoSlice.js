@@ -12,8 +12,11 @@ const todoSlice = createSlice({
   initialState,
   reducers: {
     add: (state, action) => {
-        console.log("addded",action)
-      state.push({ title: "go to gym", value: false });
+      console.log("addded", action);
+      state.push({
+        title : action.payload,
+        value : false
+      });
     },
   },
 });
