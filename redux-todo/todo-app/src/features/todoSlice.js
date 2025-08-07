@@ -12,14 +12,16 @@ const todoSlice = createSlice({
   initialState,
   reducers: {
     add: (state, action) => {
-      console.log("addded", action);
       state.push({
-        title : action.payload,
-        value : false
+        title: action.payload,
+        value: false,
       });
+    },
+    remove: (state, action) => {
+      state.splice(action.payload,1);
     },
   },
 });
 
 export default todoSlice.reducer;
-export const { add } = todoSlice.actions;
+export const { add,remove } = todoSlice.actions;

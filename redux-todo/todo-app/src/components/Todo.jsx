@@ -1,12 +1,16 @@
 import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { add } from "../features/todoSlice";
+import { add, remove } from "../features/todoSlice";
+import { AiFillCheckCircle } from "react-icons/ai";
+import { CiCircleRemove } from "react-icons/ci";
+import { GoCircle } from "react-icons/go";
 
 function Todo() {
   const todos = useSelector((state) => state.todo);
   const dispatch = useDispatch();
 
   const [input, setInput] = useState("");
+  // const [toggle,setToggle] = useState
 
   return (
     <div className="main">
@@ -30,9 +34,11 @@ function Todo() {
       </div>
       {todos.map((task, i) => (
         <div key={i} className="tasks">
+          <p>{task.value ? <AiFillCheckCircle /> : <GoCircle />}</p>
           <h3>{task.title}</h3>
-          <p>{task.value ? "completed" : "pending"}</p>
-          <button>❌</button>
+          <button onClick={() => dispatch(remove(i))}>
+            <CiCircleRemove />
+          </button>
         </div>
       ))}
     </div>
