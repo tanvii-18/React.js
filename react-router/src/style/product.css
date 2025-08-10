@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1{
+    text-align: center;
+    margin: 30px;
+    font-size: 3rem;
+}
+
+.container{
+    height: 400px;
+    width: 90%;
+    margin: 0 auto;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.product{
+    width: 30%;
+    height: 400px;
+    margin: auto;
+}
+
+.image{
+    height: 200px;
+    width: 100%;
+    margin: auto;
+}
+
+.image img{
+    height: 200px;
+    width: 100%;
+    object-fit: contain;
+}
+
+.details{
+    max-width: 80%;
+    height: auto;
+    margin: 10% auto;
+    row-gap: 10px;
+}
+
+.filtering{
+    margin: 10px;
+    height: 200px;
+}
+
+.filtering h5{
+    font-size: 20px;
+    padding: 5px 0;
+}

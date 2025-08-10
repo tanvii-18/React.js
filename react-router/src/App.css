@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav{
+    background-color: rgb(42, 113, 255);
+    height: 50px;
+    width: 100%;
+    padding: 0 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar{
+    display: flex;
+}
+
+.navbar a{
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    padding: 10px 0;
+}
+
+a.active{
+    background-color: rgb(255, 255, 255);
+    color: rgb(42, 113, 255);
+    height: 50px;
+    width: 100%;
+    text-align: center;
+}
+
+
+/* Login */
+
+.login h1{
+   text-align: center;
+   margin-top: 50px;
+   margin-bottom: 0;
+   font-size: 35px;
+   color: rgb(42, 113, 255);
+}
+
+.details{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    max-width: 30%;
+    height: 300px;
+}
+
+.details label{
+    margin: 0 25%;
+    font-weight: 600;
+}
+
+.details input{
+    width: 50%;
+    margin: auto;
+    padding: 10px;
+}
+
+button{
+    width: 20%;
+    height: 40px;
+    margin: 30px auto 0;
+    background-color: #2a71ff;
+    color: white;
+    border: 2px solid #2a71ff;
+    border-radius: 10px;
+    font-size: 18px;
+    transition: 0.2s;
+}
+
+button:hover{
+    background-color: white;
+    color: #2a71ff;
+}
+
+.Toastify__close-button {
+  align-self: center !important; 
+  margin-top: 0 !important;     
+}
