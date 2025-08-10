@@ -3,7 +3,10 @@
 <h3>Description:</h3>
 
 A mini e-commerce web app built with React and React Router that demonstrates product listing, detailed product views, and state management using Redux slices.
-Features include:
+
+video link :(https://drive.google.com/file/d/1XDH7Jo01h9cNZPSCrg4kUHnv5KflQfm_/view?usp=sharing)
+
+<h3>Features include:</h3>
 
 Product Page – Displays a list of products fetched from db.json.
 
