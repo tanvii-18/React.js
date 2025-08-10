@@ -1,12 +1,30 @@
-# React + Vite
+<h2>🛒 React Router E-Commerce Demo with Redux & Local Storage </h2>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<h3>Description:</h3>
 
-Currently, two official plugins are available:
+A mini e-commerce web app built with React and React Router that demonstrates product listing, detailed product views, and state management using Redux slices.
+Features include:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Product Page – Displays a list of products fetched from db.json.
 
-## Expanding the ESLint configuration
+Description Page – Shows detailed info for each product.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Toast Notifications – User-friendly alerts using react-toastify.
+
+Redux Toolkit Slices – Manage cart and product state efficiently.
+
+LocalStorage – Persist cart data between page reloads.
+
+Fake Backend – Powered by json-server with db.json.
+
+<h4>Tech Stack:</h4>
+
+React.js
+
+React Router
+
+Redux Toolkit
+
+react-toastify
+
+json-server
