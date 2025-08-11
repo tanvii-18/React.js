@@ -1,12 +1,29 @@
-# React + Vite
+<h2>📝 React Todo App with LocalStorage & Toastify</h2>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<h4>Description:</h4>
 
-Currently, two official plugins are available:
+A simple Todo web app built with React that lets users add, edit, and remove tasks, with task persistence using LocalStorage and toast notifications for better UX.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<h4>Video link:</h4> (Add your demo video link here)
 
-## Expanding the ESLint configuration
+<h4>Features include:</h4>
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Add Task – Input field with a button to add new tasks.
+
+Edit Task – Update existing tasks easily.
+
+Remove Task – Delete individual tasks from the list.
+
+Validation & Toastify Alerts – Shows a toast notification if the task input is empty.
+
+LocalStorage Persistence – Keeps tasks saved even after page reloads.
+
+<h4>Tech Stack:</h4>
+
+React.js
+
+react-toastify
+
+LocalStorage
+
+
