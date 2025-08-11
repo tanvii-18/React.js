@@ -1,9 +1,11 @@
 import React, { useState } from "react";
+import "../App.css";
 import { useSelector, useDispatch } from "react-redux";
 import { add, remove, update } from "../features/todoSlice";
 import { AiFillCheckCircle } from "react-icons/ai";
 import { CiCircleRemove } from "react-icons/ci";
 import { GoCircle } from "react-icons/go";
+import { toast } from "react-toastify";
 
 function Todo() {
   const todos = useSelector((state) => state.todo);
@@ -17,7 +19,7 @@ function Todo() {
       dispatch(add(input));
       setInput("");
     } else {
-      alert("Please enter a task before adding!");
+      toast("Please enter a task before adding!");
     }
   };
 
@@ -34,43 +36,49 @@ function Todo() {
         />
         <button onClick={handleAdd}>Add Task</button>
       </div>
-      {todos.map((task, i) => (
-        <div key={i} className="tasks">
-          <p
-            onClick={() =>
-              dispatch(
-                update({
-                  index: i,
-                  title: task.title,
-                  value: !task.value,
-                })
-              )
-            }
-          >
-            {task.value ? <AiFillCheckCircle /> : <GoCircle />}
-          </p>
-          <h3>{task.title}</h3>
-          <button
-            onClick={() => {
-              const newTitle = prompt("Edit task:", task.title);
-              if (newTitle) {
+
+      <div className="task-cont">
+        {todos.map((task, i) => (
+          <div key={i} className="tasks">
+            <p
+              onClick={() =>
                 dispatch(
                   update({
                     index: i,
-                    title: newTitle,
-                    value: task.value,
+                    title: task.title,
+                    value: !task.value,
                   })
-                );
+                )
               }
-            }}
-          >
-            Edit
-          </button>
-          <button onClick={() => dispatch(remove(i))}>
-            <CiCircleRemove />
-          </button>
-        </div>
-      ))}
+            >
+              {task.value ? <AiFillCheckCircle /> : <GoCircle />}
+            </p>
+            <h3>{task.title}</h3>
+
+            <div className="btns">
+              <button
+                onClick={() => {
+                  const newTitle = prompt("Edit task:", task.title);
+                  if (newTitle) {
+                    dispatch(
+                      update({
+                        index: i,
+                        title: newTitle,
+                        value: task.value,
+                      })
+                    );
+                  }
+                }}
+              >
+                Edit
+              </button>
+              <button onClick={() => dispatch(remove(i))}>
+                <CiCircleRemove />
+              </button>
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
