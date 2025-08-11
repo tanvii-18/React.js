@@ -7,4 +7,9 @@ const store = configureStore({
   },
 });
 
+
+store.subscribe(() => {
+  localStorage.setItem("todos", JSON.stringify(store.getState().todo));
+});
+
 export default store;

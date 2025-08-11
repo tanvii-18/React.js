@@ -1,11 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const initialState = [
-  {
-    title: "wake up at 6AM !",
-    value: true,
-  },
-];
+const initialState =  JSON.parse(localStorage.getItem("todos")) || [];
+
 
 const todoSlice = createSlice({
   name: "todo",
@@ -18,10 +14,17 @@ const todoSlice = createSlice({
       });
     },
     remove: (state, action) => {
-      state.splice(action.payload,1);
+      state.splice(action.payload, 1);
+    },
+    update: (state, action) => {
+      const { index, title, value } = action.payload;
+      if (state[index]) {
+        state[index].title = title;
+        state[index].value = value;
+      }
     },
   },
 });
 
 export default todoSlice.reducer;
-export const { add,remove } = todoSlice.actions;
+export const { add, remove, update } = todoSlice.actions;
