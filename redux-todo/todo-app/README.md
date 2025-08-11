@@ -4,8 +4,9 @@
 
 A simple Todo web app built with React that lets users add, edit, and remove tasks, with task persistence using LocalStorage and toast notifications for better UX.
 
-<h4>Video link:</h4> (https://github.com/user-attachments/assets/e5714577-0d20-40b7-9326-733420c80575)
-]
+<h4>Video link:</h4>
+
+https://github.com/user-attachments/assets/66c44c51-e57a-4c5f-93b8-2ef33fb00a58
 
 <h4>Features include:</h4>
 
