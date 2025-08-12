@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main {
+  width: 100%;
+  display: flex;
+  /* background-color: #0d324d; */
+  background: linear-gradient(135deg, #0d324d, #27496d, #1a2f4b);
+}
+
+/* left part ..BROWSE.. */
+.left-section {
+  width: 20%;
+  height: 550px;
+  box-shadow: 10px 15px 15px rgba(0, 0, 0, 0.3);
+  border-radius: 2px;
+  padding: 20px;
+}
+
+.left-section h2 {
+  font-size: 40px;
+  font-family: "Josefin Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  color: #82b8e3;
+  text-shadow: 0 0 8px rgba(130, 184, 227, 0.3);
+}
+
+.left-section .features {
+  margin: 30px 0px;
+  line-height: 40px;
+  color: #82b8e3;
+}
+
+.left-section .features h3 {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.left-section .moodBoard {
+  margin: 40px 0;
+  color: #3d3d3d;
+}
+
+.moodBoard h3 {
+  font-family: "Josefin Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 22px;
+  color: #82b8e3;
+  text-shadow: 0 0 8px rgba(15, 15, 15, 0.3);
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.moodBoard ul {
+  margin: 20px 0;
+}
+
+.moodBoard ul li {
+  list-style: none;
+  margin: 8px 0;
+}
+
+.moodBoard ul li a {
+  text-decoration: none;
+  color: #82b8e3;
+}
+
+/* right section ...MusicSect... */
+
+.right-section {
+  width: 80%;
+}
