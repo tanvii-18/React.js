@@ -29,31 +29,30 @@ function Browse() {
       </div>
 
       <div className="moodBoard">
-        <h3>
-          Mood Board <TbMoodSpark />
-        </h3>
+        <h3>Mood Board</h3>
         <ul>
           <li>
             <a href="">Lo-Fi feels</a>
           </li>{" "}
-          {/*Chill & Relax*/}
+          {/* Chill & Relax */}
           <li>
             <a href="">pure Sunshine</a>
           </li>{" "}
-          {/*Happy*/}
+          {/* Happy */}
           <li>
             <a href="">Cry in Aesthetic</a>
           </li>{" "}
-          {/*sad*/}
+          {/* sad */}
           <li>
             <a href="">Blush beats(love)</a>
           </li>{" "}
-          {/*romantic*/}
+          {/* romantic */}
           <li>
             <a href="">Dance ‘til Sunrise</a>
           </li>{" "}
-          {/*party*/}
+          {/* party */}
         </ul>
+        ;
       </div>
     </div>
   );

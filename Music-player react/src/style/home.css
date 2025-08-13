@@ -26,8 +26,8 @@
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
-  color: #82b8e3;
-  text-shadow: 0 0 8px rgba(130, 184, 227, 0.3);
+  color: white;
+  /* text-shadow: 0 0 8px rgba(130, 184, 227, 0.3); */
 }
 
 .left-section .features {
@@ -40,6 +40,22 @@
   display: flex;
   gap: 12px;
   align-items: center;
+  transition: 0.2s;
+  cursor: pointer;
+  padding: 0 10px;
+}
+
+.features h3:hover {
+  font-size: 20px;
+  color: whitesmoke;
+  padding-left: 10px;
+}
+
+.features:hover {
+  background: rgba(255, 255, 255, 0.1); /* subtle highlight */
+  border-radius: 8px;
+  transition: background 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .left-section .moodBoard {
@@ -48,16 +64,17 @@
 }
 
 .moodBoard h3 {
-  font-family: "Josefin Sans", sans-serif;
+  font-family: "Jura", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 600;
+  font-weight: 1000;
   font-style: normal;
   font-size: 22px;
-  color: #82b8e3;
-  text-shadow: 0 0 8px rgba(15, 15, 15, 0.3);
+  color: white;
+  /* text-shadow: 0 0 8px rgba(15, 15, 15, 0.3); */
   display: flex;
   gap: 20px;
   align-items: center;
+  margin-left: 8px;
 }
 
 .moodBoard ul {
@@ -66,16 +83,90 @@
 
 .moodBoard ul li {
   list-style: none;
-  margin: 8px 0;
+  margin: 18px 5px;
 }
 
 .moodBoard ul li a {
   text-decoration: none;
   color: #82b8e3;
+  transition: 0.2s;
+  padding: 5px;
+}
+
+.moodBoard ul li a:hover {
+  background-color: #0d324d;
+  border-radius: 50px;
+  padding: 8px;
+  color: white;
 }
 
 /* right section ...MusicSect... */
 
 .right-section {
   width: 80%;
+  height: auto;
+}
+
+.right-section .navigation {
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* search */
+.navigation .search-cont {
+  width: 40%;
+  height: 40px;
+  border: 0.1rem solid white;
+  color: white;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  padding: 0 2%;
+  gap: 14px;
+  padding: 20px;
+  margin: 12px 20px;
+}
+
+.search-cont input {
+  border: none;
+  background-color: transparent;
+  width: 80%;
+  height: 20px;
+  color: white;
+  outline: none;
+}
+
+.search-cont input::placeholder {
+  color: white;
+  letter-spacing: 2px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* profile */
+
+.profile-cont {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 0 20px;
+}
+
+.profile-cont button {
+  padding: 10px;
+  width: 100%;
+  background-color: black;
+  border: 0.1rem solid black;
+  border-radius: 50px;
+  color: white;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: all 0.1s ease;
+}
+
+.profile-cont button:hover {
+  background-color: transparent;
+  color: white;
+  border: 0.1rem solid white;
+  cursor: pointer;
 }
