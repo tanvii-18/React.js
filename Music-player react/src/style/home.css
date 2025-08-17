@@ -7,14 +7,14 @@
 .main {
   width: 100%;
   display: flex;
-  /* background-color: #0d324d; */
+  max-height: auto;
   background: linear-gradient(135deg, #0d324d, #27496d, #1a2f4b);
 }
 
 /* left part ..BROWSE.. */
 .left-section {
   width: 20%;
-  height: 550px;
+  height: auto;
   box-shadow: 10px 15px 15px rgba(0, 0, 0, 0.3);
   border-radius: 2px;
   padding: 20px;
@@ -31,9 +31,9 @@
 }
 
 .left-section .features {
-  margin: 30px 0px;
-  line-height: 40px;
-  color: #82b8e3;
+  margin: 20px 0px 10px 0px;
+  line-height: 50px;
+  color: #C6D6E1;
 }
 
 .left-section .features h3 {
@@ -59,7 +59,7 @@
 }
 
 .left-section .moodBoard {
-  margin: 40px 0;
+  margin: 22px 0;
   color: #3d3d3d;
 }
 
@@ -88,7 +88,7 @@
 
 .moodBoard ul li a {
   text-decoration: none;
-  color: #82b8e3;
+  color: #C6D6E1;
   transition: 0.2s;
   padding: 5px;
 }
@@ -169,4 +169,57 @@
   color: white;
   border: 0.1rem solid white;
   cursor: pointer;
+}
+
+/* song suggestion --new release-- */
+
+.song-suggestion{
+  height: 300px;
+  width: 90%;
+  margin: 2% auto;
+}
+
+.song-suggestion h2{
+  font-size: 30px;
+  letter-spacing: 1px;
+  color: white;
+  padding: 10px 0;
+}
+
+.songs-cont{
+  height: 250px;
+  width: 100%;
+  display: flex;
+  overflow:hidden;
+  gap: 30px;
+  margin-top: 20px;
+  color: white;
+}
+
+.song-card{
+  height: auto;
+  width: 16%;
+}
+
+.song-card img{
+  height: 150px;
+  width: 100%;
+  object-fit:fill;
+  border-radius: 5px;
+}
+
+.song-card h3{
+  margin-top: 10px;
+}
+
+.song-card p{
+  font-weight: 100;
+  padding-top: 10px;
+  font-size: 14px;
+}
+
+.space{
+  height: 400px;
+  width: 100%;
+  background-color: darkgrey;
 }

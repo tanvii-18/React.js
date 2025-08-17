@@ -52,7 +52,6 @@ function Browse() {
           </li>{" "}
           {/* party */}
         </ul>
-        ;
       </div>
     </div>
   );
