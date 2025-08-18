@@ -7,14 +7,17 @@
 .main {
   width: 100%;
   display: flex;
-  max-height: auto;
-  background: linear-gradient(135deg, #0d324d, #27496d, #1a2f4b);
+  height: 100vh;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
 }
 
 /* left part ..BROWSE.. */
 .left-section {
   width: 20%;
-  height: auto;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
   box-shadow: 10px 15px 15px rgba(0, 0, 0, 0.3);
   border-radius: 2px;
   padding: 20px;
@@ -33,7 +36,6 @@
 .left-section .features {
   margin: 20px 0px 10px 0px;
   line-height: 50px;
-  color: #C6D6E1;
 }
 
 .left-section .features h3 {
@@ -43,6 +45,7 @@
   transition: 0.2s;
   cursor: pointer;
   padding: 0 10px;
+  color: white;
 }
 
 .features h3:hover {
@@ -88,13 +91,14 @@
 
 .moodBoard ul li a {
   text-decoration: none;
-  color: #C6D6E1;
   transition: 0.2s;
   padding: 5px;
+  color: white;
+
 }
 
 .moodBoard ul li a:hover {
-  background-color: #0d324d;
+  background-color: #122329;
   border-radius: 50px;
   padding: 8px;
   color: white;
@@ -104,11 +108,14 @@
 
 .right-section {
   width: 80%;
-  height: auto;
+  height: 100vh;
+  margin-left: 20%;
+  overflow-y: auto;
+  background: transparent;
 }
 
 .right-section .navigation {
-  height: 60px;
+  height: 80px;
   display: flex;
   justify-content: space-between;
 }
@@ -125,7 +132,7 @@
   padding: 0 2%;
   gap: 14px;
   padding: 20px;
-  margin: 12px 20px;
+  margin: 30px 5%;
 }
 
 .search-cont input {
@@ -149,7 +156,7 @@
   display: flex;
   align-items: center;
   gap: 20px;
-  padding: 0 20px;
+  padding: 50px 20px;
 }
 
 .profile-cont button {
@@ -173,53 +180,54 @@
 
 /* song suggestion --new release-- */
 
-.song-suggestion{
+.song-suggestion {
   height: 300px;
   width: 90%;
   margin: 2% auto;
 }
 
-.song-suggestion h2{
+.song-suggestion h2 {
   font-size: 30px;
   letter-spacing: 1px;
   color: white;
   padding: 10px 0;
 }
 
-.songs-cont{
+.songs-cont {
   height: 250px;
   width: 100%;
   display: flex;
-  overflow:hidden;
+  overflow: hidden;
   gap: 30px;
   margin-top: 20px;
   color: white;
 }
 
-.song-card{
+.song-card {
   height: auto;
   width: 16%;
 }
 
-.song-card img{
+.song-card img {
   height: 150px;
   width: 100%;
-  object-fit:fill;
+  object-fit: fill;
   border-radius: 5px;
 }
 
-.song-card h3{
+.song-card h3 {
   margin-top: 10px;
 }
 
-.song-card p{
+.song-card p {
   font-weight: 100;
   padding-top: 10px;
   font-size: 14px;
 }
 
-.space{
-  height: 400px;
+.traked-songs {
+  height: 300px;
   width: 100%;
   background-color: darkgrey;
+  margin: 5% 0;
 }

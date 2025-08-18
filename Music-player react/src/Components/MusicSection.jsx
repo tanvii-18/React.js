@@ -48,7 +48,7 @@ function MusicSection() {
         </div>
 
         <div className="profile-cont">
-          <IoNotifications style={{ fontSize: "40px", color: "#82b8e3" }} />
+          <IoNotifications style={{ fontSize: "40px" , color:"white" }} />
           <button>LogIn</button>
         </div>
       </div>
@@ -67,7 +67,9 @@ function MusicSection() {
           }
         </div>
 
-        <div className="space"></div>
+        <div className="traked-songs">
+
+        </div>
       </div>
     </div>
   );
