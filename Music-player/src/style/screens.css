@@ -1,0 +1,20 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.trendings h2{
+    margin: 1rem; 
+}
+
+.trendings .main-box {
+  display: flex;
+}
+
+.trendings .box {
+  height: 220px;
+  width: 160px;
+  margin: 1% auto;
+  background-color: crimson;
+}

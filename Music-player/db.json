@@ -1,0 +1,138 @@
+{
+  "playlist": [
+    {
+      "id": "s001",
+      "title": "Pardesiya (Param Sundari)",
+      "cover": "https://c.saavncdn.com/795/Pardesiya-From-Param-Sundari-Hindi-2025-20250729184535-500x500.jpg",
+      "singer": "Sonu Nigam, Krishnakali Saha",
+      "Trending": true,
+      "genre": ["romantic", "chill"],
+      "src": "",
+      "IsNew": true
+    },
+    {
+      "id": "s002",
+      "title": "Tu Meri Dhadak Hai",
+      "cover": "https://images.genius.com/68b0504b6d67186224b6258e82eece00.1000x1000x1.png",
+      "singer": "Vishal Mishra",
+      "Trending": true,
+      "genre": ["romantic", "melody"],
+      "src": "",
+      "IsNew": true
+    },
+    {
+      "id": "s003",
+      "title": "Bairiyaan",
+      "cover": "https://m.media-amazon.com/images/I/517nw5D4rgL._UXNaN_FMjpg_QL85_.jpg",
+      "singer": "Atif Aslam, Shreya Ghoshal",
+      "Trending": false,
+      "genre": ["pop", "chill"],
+      "src": "",
+      "IsNew": false
+    },
+    {
+      "id": "s004",
+      "title": "Sahiba",
+      "cover": "https://c.saavncdn.com/140/Sahiba-Hindi-2023-20231213191015-500x500.jpg",
+      "singer": "by Aditya Rikhari",
+      "Trending": true,
+      "genre": ["romantic", "melody"],
+      "src": "",
+      "IsNew": false
+    },
+    {
+      "id": "s005",
+      "title": "Dayre (Dilwale)",
+      "cover": "https://m.media-amazon.com/images/M/MV5BYjFjMzMxNDMtYWY0ZC00MWIyLTk0YjktM2ViZmVhZDE4ZmRiXkEyXkFqcGc@._V1_.jpg",
+      "singer": "Arijit Singh, Antara Mitra",
+      "Trending": false,
+      "genre": ["romantic", "happy"],
+      "src": "",
+      "IsNew": false
+    },
+    {
+      "id": "s006",
+      "title": "Diet Mountain Dew",
+      "cover": "https://c.saavncdn.com/970/Born-To-Die-The-Paradise-Edition-English-2012-20250805222558-500x500.jpg",
+      "singer": "Lana Del Rey",
+      "Trending": true,
+      "genre": ["pop", "chill"],
+      "src": "",
+      "IsNew": false
+    },
+    {
+      "id": "s007",
+      "title": "Dooron Dooron",
+      "cover": "https://c.saavncdn.com/615/Dooron-Dooron-Punjabi-2022-20220124231445-500x500.jpg",
+      "singer": "Sajid Khan",
+      "Trending": false,
+      "genre": ["romantic", "melody"],
+      "src": "",
+      "IsNew": true
+    },
+    {
+      "id": "s008",
+      "title": "Tenu Sang Rakhna",
+      "cover": "https://c.saavncdn.com/415/Tenu-Sang-Rakhna-From-Jigra-Hindi-2024-20241003174013-500x500.jpg",
+      "singer": "Diljit Dosanjh",
+      "Trending": true,
+      "genre": ["romantic", "happy"],
+      "src": "",
+      "IsNew": false
+    },
+    {
+      "id": "s009",
+      "title": "Tum Hi Ho",
+      "cover": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRelAPnUO39G4Qh3_cGeXORJjGvg7JfGJuS6A&s",
+      "singer": "Arijit Singh",
+      "Trending": true,
+      "genre": ["romantic", "sad"],
+      "src": "",
+      "IsNew": false
+    },
+    {
+      "id": "s010",
+      "title": "Kalank (Title Track)",
+      "cover": "https://c.saavncdn.com/145/Kalank-Remix-By-DJ-Ganesh-Hindi-2023-20231228143854-500x500.jpg",
+      "singer": "Arijit Singh",
+      "Trending": false,
+      "genre": ["sad", "melody"],
+      "src": "",
+      "IsNew": false
+    },
+    {
+      "id": "s011",
+      "title": "Iktara (Title Track)",
+      "cover": "https://c.saavncdn.com/910/Wake-Up-Sid-Hindi-2009-20190617160255-500x500.jpg",
+      "singer": "Amit Trivedi",
+      "Trending": false,
+      "genre": ["sad"],
+      "src": "",
+      "IsNew": false
+    },
+    {
+      "id": "s012",
+      "title": "Tum Ho Toh",
+      "cover": "https://c.saavncdn.com/706/Tum-Ho-Toh-From-Saiyaara-Hindi-2025-20250616054803-500x500.jpg",
+      "singer": "Vishal Mishra, Hansika Pareek",
+      "Trending": false,
+      "genre": ["romantic"],
+      "src": "",
+      "IsNew": true
+    }
+  ],
+  "Artist":[
+    {
+      "id":"01",
+      "name":"Arijit Singh",
+      "songs":[],
+      "poster": ""
+    },
+    {
+      "id":"02",
+      "name":"Arijit Singh",
+      "songs":[],
+      "poster": ""
+    }
+  ]
+}

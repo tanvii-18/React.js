@@ -1,0 +1,2 @@
+⚠️ Note: Songs are not included in this repository due to copyright restrictions.
+The project demonstrates how a music player works. You can add your own .mp3 files locally in a songs/ folder to test it.

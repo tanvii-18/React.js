@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* App.jsx */
+
+.main {
+  /* height: 100vh; */
+  width: 100vw;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  display: flex;
+}
+
+.browse {
+  height: 100vh;
+  width: 20%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-shadow: 10px 15px 15px rgba(0, 0, 0, 0.3);
+  border-radius: 2px;
+}
+
+.routes {
+  margin-left: 20%;
+  width: 80%;
+  min-height: 100vh;
+  height: auto;
+}
+
+/* browse.jsx */
+
+.navigation {
+  margin: 20px;
+  padding: 10px 0;
+}
+
+.navigation h2 {
+  margin-bottom: 20px;
+  padding-left: 10px;
+  font-size: 30px;
+  letter-spacing: 1px;
+}
+
+.features {
+  margin: 10px 0;
+  padding: 10px 0 12px 0px;
+  font-size: 18px;
+}
+
+.features nav {
+  margin: 14px 0;
+  transition: all 0.5s ease;
+}
+
+.nav-item {
+  display: flex; /* makes icon + text sit in a row */
+  align-items: center; /* vertically centers them */
+  gap: 12px; /* spacing between icon and text */
+  color: white; /* text color */
+  text-decoration: none; /* remove underline */
+  font-size: 18px;
+  padding: 8px 12px;
+  transition: all 0.2s ease;
+}
+
+.icon {
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.features .nav-item:hover {
+  font-size: 20px;
+  color: #23d9ca;
+  font-weight: 700;
+  border-left: 3px solid white;
+}
+
+.features:hover {
+  background: rgba(255, 255, 255, 0.1); /* subtle highlight */
+  border-radius: 8px;
+  transition: background 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* search.jsx */
+
+.top-navbar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.searchBox {
+  height: 40px;
+  width: 50%;
+  background-color: #203a43;
+  border-radius: 20px;
+  box-shadow: 6px 3px 10px rgba(0, 0, 0, 0.2);
+  transition: 0.5s ease;
+  border: 2px solid #203a43;
+  margin: 2%;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.searchBox input {
+  border: none;
+  height: 30px;
+  font-size: 16px;
+  letter-spacing: 1px;
+  background-color: transparent;
+  outline: none;
+}
+
+.searchBox .searchicon {
+  font-size: 20px;
+  margin: 5px 0 0 20px;
+}
+
+.user-login {
+  margin: 2%;
+  display: flex;
+  gap: 20px;
+}
+
+/* Home.jsx */
+.main-box {
+  display: flex;
+}
+
+.box {
+  height: 250px;
+  width: 160px;
+  margin: 5% auto;
+  background-color: crimson;
+}
+
+.curently-playing{
+  height: 60px;
+  width: 100%;
+  background-color: aquamarine;
+  position: fixed;
+  bottom: 0;
+}
