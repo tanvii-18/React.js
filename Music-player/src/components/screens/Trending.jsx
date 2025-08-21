@@ -1,28 +1,27 @@
-import React from 'react'
-import "../../style/screens.css"
+import React from "react";
+import "../../style/screens.css";
+// import songsData from "../../../public/db.json";
+import SongBox from "../songUi";
 
-function Trending() {
+const TrendingSongs = () => {
+
+  const trending = songsData.playlist.filter((song) => song.Trending);
+
   return (
-    <div className='trendings'>
+    <div className="trendings">
       <h2>Trending Songs</h2>
-
       <div className="main-box">
-        <div className="box">1</div>
-        <div className="box">2</div>
-        <div className="box">3</div>
-        <div className="box">4</div>
-        <div className="box">5</div>
-      </div>
-
-      <div className="main-box">
-        <div className="box">1</div>
-        <div className="box">2</div>
-        <div className="box">3</div>
-        <div className="box">4</div>
-        <div className="box">5</div>
+        {trending.map((song) => (
+          <SongBox
+            key={song.id}
+            title={song.title}
+            cover={song.cover}
+            singer={song.singer}
+          />
+        ))}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Trending
+export default TrendingSongs;

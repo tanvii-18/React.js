@@ -129,14 +129,28 @@
 /* Home.jsx */
 .main-box {
   display: flex;
+  flex-wrap: wrap;
+  width: 90%;
+  margin: auto;
+  padding-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 }
 
-.box {
-  height: 250px;
-  width: 160px;
-  margin: 5% auto;
-  background-color: crimson;
+.song-box {
+  height: 200px;
+  width: 140px;
+  margin: 0.8rem auto;
+  border-radius: 10px;
 }
+
+.song-box img{
+  height: 120px;
+  width: 100%;
+    border-radius: 10px;
+  object-fit:inherit;
+}
+
 
 .curently-playing{
   height: 60px;

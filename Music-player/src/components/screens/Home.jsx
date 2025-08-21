@@ -1,32 +1,45 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Search from "../search";
-
-
-const moodBoard =[
-  {text:"Lo-Fi feels",src:"https://i.pinimg.com/originals/05/95/09/059509584519edd8c330f33b8ba3b0aa.jpg"},
-  {text:"pure Sunshine",src:""},
-  {text:"Cry in Aesthetic",src:""},
-  {text:"Blush beats(love)",src:""},
-  {text:"Dance ‘til Sunrise",src:""}
-]
+import SongBox from "../songUi";
 
 function Home() {
+  const [songData, setSongData] = useState([]);
+  const [currentSong, setCurrentSong] = useState(null);
+
+  useEffect(() => {
+    fetch("/db.json")
+      .then((res) => res.json())
+      .then((data) => setSongData(data.playlist));
+  }, []);
+
   return (
     <div>
       <Search />
 
       <div className="main-box">
-        <div className="box">1</div>
-        <div className="box">2</div>
-        <div className="box">3</div>
-        <div className="box">4</div>
-        <div className="box">5</div>
+        {songData.map((el, i) => (
+          <SongBox
+            key={el.id}
+            title={el.title}
+            cover={el.cover}
+            singer={el.singer}
+            onClick={() => setCurrentSong(el)}
+          />
+        ))}
       </div>
 
-      <div className="curently-playing">
-        <div className="song-details">
-        <img src="" alt="" /></div>
-      </div>
+      {currentSong && (
+        <div className="curently-playing">
+          <div className="song-details">
+            <img src={currentSong.cover} alt={currentSong.title} width={60} />
+            <div>
+              <h3>{currentSong.title}</h3>
+              <p>{currentSong.singer}</p>
+            </div>
+          </div>
+          <audio src={currentSong.src} controls autoPlay />
+        </div>
+      )}
     </div>
   );
 }
