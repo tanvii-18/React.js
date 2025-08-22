@@ -1,29 +1,12 @@
-import React from 'react'
+import React from "react";
 import "../../style/screens.css";
 import songsData from "../../../public/db.json";
-import SongBox from "../songUi";
+import Player from "../screens/player";
 
 function NewRelease() {
-
   const newRelease = songsData.playlist.filter((song) => song.IsNew);
 
-  return (
-    <div className='newSongs'>
-      <h2>New Release</h2>
-
-      <div className="main-box">
-        {newRelease.map((song) => (
-          <SongBox
-            key={song.id}
-            title={song.title}
-            cover={song.cover}
-            singer={song.singer}
-          />
-        ))}
-      </div>
-
-    </div>
-  )
+  return <Player songs={newRelease} title="New Releases" />;
 }
 
-export default NewRelease
+export default NewRelease;

@@ -27,6 +27,7 @@
   width: 80%;
   min-height: 100vh;
   height: auto;
+    padding-bottom: 80px; 
 }
 
 /* browse.jsx */
@@ -55,11 +56,11 @@
 }
 
 .nav-item {
-  display: flex; /* makes icon + text sit in a row */
-  align-items: center; /* vertically centers them */
-  gap: 12px; /* spacing between icon and text */
-  color: white; /* text color */
-  text-decoration: none; /* remove underline */
+  display: flex; 
+  align-items: center; 
+  gap: 12px; 
+  color: white; 
+  text-decoration: none;
   font-size: 18px;
   padding: 8px 12px;
   transition: all 0.2s ease;
@@ -127,14 +128,19 @@
 }
 
 /* Home.jsx */
+
+.main-container h2{
+  margin-left: 10%;
+  margin-top: 20px;
+}
+
 .main-box {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   width: 90%;
   margin: auto;
   padding-top: 10px;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  padding-bottom: 0px; /* 👈 ensures last row of songs not hidden */
 }
 
 .song-box {
@@ -142,6 +148,7 @@
   width: 140px;
   margin: 0.8rem auto;
   border-radius: 10px;
+  cursor: pointer;
 }
 
 .song-box img{
@@ -151,11 +158,33 @@
   object-fit:inherit;
 }
 
-
-.curently-playing{
+.curently-playing {
   height: 60px;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: black;
+  /* display: flex; */
   position: fixed;
   bottom: 0;
+  align-items: center;   
+  gap: 15px;             
+  padding: 0 15px;
+  color: white;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-top: 1px solid white;
 }
+
+.song-details {
+  display: flex;
+  align-items: center;
+  gap: 5%;
+}
+
+.controls{
+  margin-left: 10%;
+  display: flex;
+  gap: 20px;
+}
+
+
+
