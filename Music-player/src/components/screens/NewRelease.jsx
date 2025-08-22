@@ -1,6 +1,6 @@
 import React from 'react'
 import "../../style/screens.css";
-// import songsData from "../../../public/db.json";
+import songsData from "../../../public/db.json";
 import SongBox from "../songUi";
 
 function NewRelease() {

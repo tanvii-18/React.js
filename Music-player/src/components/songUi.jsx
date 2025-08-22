@@ -1,14 +1,15 @@
-const SongBox = ({ title, cover ,singer }) => {
+function SongBox({ title, cover, singer, onClick }) {
   return (
-    <div className="song-box">
-      <img src={cover} alt="" />
+    <div className="song-box" onClick={onClick}>
+      <img src={cover} alt={title} />
       <h3 style={{fontSize:"16px"}}>{title}</h3>
       <p style={{fontSize:"10px"}}>{singer}</p>
     </div>
   );
-};
+}
 
 export default SongBox;
+
 
 
   // ,

@@ -155,7 +155,7 @@
 .curently-playing{
   height: 60px;
   width: 100%;
-  background-color: aquamarine;
+  background-color: rgba(0, 0, 0, 0.1);
   position: fixed;
   bottom: 0;
 }
