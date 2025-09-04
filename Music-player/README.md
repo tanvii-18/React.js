@@ -2,7 +2,9 @@
 
 A modern web-based music player built with React. It allows users to browse songs, search, add to favourites, and play music with full controls (play/pause, next, previous). Features a fixed bottom player bar that displays the currently playing song with its details and album art.
 
-<h3>video link :</h3>
+<h3>video link :</h3> 
+
+https://github.com/user-attachments/assets/ae70ec34-10f3-46ab-ab49-96f28c4d442f
 
 <h3>✨ Features:</h3>
 
