@@ -1,5 +1,3 @@
-import React from "react";
-
 function SignIn() {
   return (
     <div className="h-screen w-screen bg-[#1C1F2C] flex flex-col justify-center items-center px-4">
