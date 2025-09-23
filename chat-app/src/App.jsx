@@ -1,10 +1,11 @@
 import "./App.css";
-import SignIn from "./chat-view/Chatview";
+import SignIn from "./pages/Auth/SignIn";
+import SignUp from "./pages/Auth/SignUp";
 
 function App() {
   return (
     <>
-      <SignIn />
+      <SignUp />
     </>
   );
 }
