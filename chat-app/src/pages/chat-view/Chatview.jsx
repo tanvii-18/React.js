@@ -6,4 +6,4 @@ function Chatview() {
   );
 }
 
-export default SignIn;
+export default Chatview;

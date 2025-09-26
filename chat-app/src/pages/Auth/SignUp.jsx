@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { signUpUser } from "../../slices/userSlice";
+import { Link } from "react-router-dom";
 
 function SignUp() {
   const [email, setEmail] = useState("");
@@ -18,9 +19,20 @@ function SignUp() {
   };
 
   return (
-    <div>
+    <div className="h-screen w-screen bg-[#1C1F2C] flex flex-col justify-center items-center px-4">
+      <div className="absolute top-5 text-center">
+        <h1 className="text-4xl font-bold text-amber-50 tracking-wide">
+          Thread<span className="text-[#6687FF]">ly</span>
+        </h1>
+        <p className="font-light text-[0.1rem] text-gray-400 mt-1">
+          Where every chat finds its thread.
+        </p>
+      </div>
+
+      <h2 className="text-3xl font-semibold text-amber-50 mt-10 m-5 ">
+        Sign Up
+      </h2>
       <div className="bg-[#262837] w-full max-w-sm p-7 rounded-2xl shadow-lg">
-        <h2 className="text-white">Sign Up</h2>
         <form className="w-full" onSubmit={handlesubmit}>
           <input
             type="text"
@@ -48,12 +60,14 @@ function SignUp() {
             Sign Up
           </button>
 
-          {/* <p className="mt-4 text-center text-sm text-amber-50">
-            Don’t have an account?{" "}
-            <span className="hover:underline hover:text-[#6687FF] transition-all cursor-pointer">
-              Sign up
-            </span>
-          </p> */}
+          <p className="mt-4 text-center text-sm text-amber-50">
+            Already have an account?{" "}
+            <Link to="/">
+              <span className="hover:underline hover:text-[#6687FF] transition-all cursor-pointer">
+                Sign In
+              </span>
+            </Link>
+          </p>
 
           {/* {error && <p className="text-red-400 mt-2">{error}</p>} */}
         </form>
