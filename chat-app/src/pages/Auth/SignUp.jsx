@@ -20,7 +20,7 @@ function SignUp() {
 
   return (
     <div className="h-screen w-screen bg-[#1C1F2C] flex flex-col justify-center items-center px-4">
-      <div className="absolute top-5 text-center">
+      <div className="text-center mb-5">
         <h1 className="text-4xl font-bold text-amber-50 tracking-wide">
           Thread<span className="text-[#6687FF]">ly</span>
         </h1>
@@ -29,9 +29,9 @@ function SignUp() {
         </p>
       </div>
 
-      <h2 className="text-3xl font-semibold text-amber-50 mt-10 m-5 ">
+      {/* <h2 className="text-3xl font-semibold text-amber-50 mt-10 m-5 ">
         Sign Up
-      </h2>
+      </h2> */}
       <div className="bg-[#262837] w-full max-w-sm p-7 rounded-2xl shadow-lg">
         <form className="w-full" onSubmit={handlesubmit}>
           <input

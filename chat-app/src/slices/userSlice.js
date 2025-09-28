@@ -39,7 +39,6 @@ export const signInUser = createAsyncThunk(
     const user = {
       email: userCredential.user.email,
       displayName: userCredential.user.displayName,
-      image: userCredential.user.photoURL,
     };
     return user;
   }

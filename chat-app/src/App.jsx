@@ -11,6 +11,14 @@ function App() {
         <Route path="/signUp" element={<SignUp />} />
         <Route path="/" element={<SignIn />} />
         <Route path="/Chatview" element={<Chatview />} />
+        <Route
+          path="*"
+          element={
+            <h2 className="text-red-700 text-3xl text-center mt-[5%] font-serif">
+              404 not found !
+            </h2>
+          }
+        />
       </Routes>
     </>
   );
