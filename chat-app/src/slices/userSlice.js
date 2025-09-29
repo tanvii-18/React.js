@@ -1,5 +1,8 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { createUserWithEmailAndPassword } from "firebase/auth";
+import {
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+} from "firebase/auth";
 import { doc, getDocs, setDoc } from "firebase/firestore";
 import { auth, db } from "../firebase/firebase";
 
@@ -38,7 +41,7 @@ export const signInUser = createAsyncThunk(
     );
     const user = {
       email: userCredential.user.email,
-      displayName: userCredential.user.displayName,
+      id: userCredential.user.uid,
     };
     return user;
   }
@@ -81,10 +84,7 @@ const usersSlice = createSlice({
       state.isLoading = true;
     });
     builder.addCase(signInUser.fulfilled, (state, action) => {
-      state.users = action.payload;
-      state.currentUsers = state.users.find(
-        (value) => value.email == user.email
-      );
+      state.currentUsers = action.payload;
       state.isLoading = false;
     });
     builder.addCase(signInUser.rejected, (state) => {

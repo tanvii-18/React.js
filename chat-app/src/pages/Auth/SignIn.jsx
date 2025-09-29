@@ -1,7 +1,32 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { signInUser } from "../../slices/userSlice";
+import { useState } from "react";
+import { useDispatch } from "react-redux";
 
 function SignIn() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const handleLogin = async (e) => {
+    e.preventDefault();
+
+    try {
+      const login = await dispatch(signInUser({ email, password }));
+
+      if (login.meta.requestStatus === "fulfilled") {
+        alert("Login successful!");
+        navigate("/Chatview");
+      } else {
+        console.log("Login failed:", login.error.message);
+        alert("Invalid email or password!");
+      }
+    } catch (error) {
+      console.log("error occurs!", error);
+    }
+  };
+
   return (
     <div>
       <div className="h-screen w-screen bg-[#1C1F2C] flex flex-col justify-center items-center px-4">
@@ -18,17 +43,19 @@ function SignIn() {
         {/* <h2 className="text-3xl font-semibold text-amber-50 m-4 ">Sign In</h2> */}
         {/* Sign in container */}
         <div className="bg-[#262837] w-full max-w-sm p-7 rounded-2xl shadow-lg">
-          <form className="w-full">
+          <form className="w-full" onSubmit={handleLogin}>
             <input
               type="email"
               placeholder="Email"
               onChange={(e) => setEmail(e.target.value)}
+              value={email}
               className="w-full p-3 mb-4 rounded-lg bg-[#313447] text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#6687FF]"
             />
             <input
               type="password"
               placeholder="Password"
               onChange={(e) => setPassword(e.target.value)}
+              value={password}
               className="w-full p-3 mb-6 rounded-lg bg-[#313447] text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#6687FF]"
             />
 
