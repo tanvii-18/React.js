@@ -17,7 +17,7 @@ function SignIn() {
 
       if (login.meta.requestStatus === "fulfilled") {
         alert("Login successful!");
-        navigate("/Chatview");
+        navigate("/ChatList");
       } else {
         console.log("Login failed:", login.error.message);
         alert("Invalid email or password!");

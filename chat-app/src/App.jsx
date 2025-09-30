@@ -2,7 +2,8 @@ import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import SignIn from "./pages/Auth/SignIn";
 import SignUp from "./pages/Auth/SignUp";
-import Chatview from "./pages/chat-view/Chatview";
+import Chatview from "./pages/Chat-Box/Chatview";
+import ChatList from "./pages/Chat-Box/ChatList";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Routes>
         <Route path="/signUp" element={<SignUp />} />
         <Route path="/" element={<SignIn />} />
+        <Route path="/ChatList" element={<ChatList />} />
         <Route path="/Chatview" element={<Chatview />} />
         <Route
           path="*"
