@@ -4,6 +4,7 @@ import SignIn from "./pages/Auth/SignIn";
 import SignUp from "./pages/Auth/SignUp";
 import Chatview from "./pages/Chat-Box/Chatview";
 import ChatList from "./pages/Chat-Box/ChatList";
+import MainChatView from "./pages/Chat-Box/MainChatView";
 
 function App() {
   return (
@@ -11,8 +12,9 @@ function App() {
       <Routes>
         <Route path="/signUp" element={<SignUp />} />
         <Route path="/" element={<SignIn />} />
+        <Route path="/ChatView" element={<MainChatView />} />
         <Route path="/ChatList" element={<ChatList />} />
-        <Route path="/Chatview" element={<Chatview />} />
+        <Route path="/MessageContainer" element={<Chatview />} />
         <Route
           path="*"
           element={
