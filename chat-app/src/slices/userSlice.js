@@ -3,11 +3,18 @@ import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
 } from "firebase/auth";
-import { doc, getDocs, setDoc } from "firebase/firestore";
-import { auth, db } from "../firebase/firebase";
+import {
+  collection,
+  getDocs,
+  setDoc,
+  doc,
+  query,
+  orderBy,
+  limit,
+} from "firebase/firestore";
+import { db, auth } from "../firebase/firebase";
 
-// todo : sign up user
-
+// ---------------------- SIGN UP ----------------------
 export const signUpUser = async (username, email, password) => {
   try {
     const userCredential = await createUserWithEmailAndPassword(
@@ -17,20 +24,23 @@ export const signUpUser = async (username, email, password) => {
     );
 
     await setDoc(doc(db, "users", userCredential.user.uid), {
-      username: username,
-      email: email,
+      username,
+      email,
       id: userCredential.user.uid,
     });
 
-    const user = userCredential.user;
-    return user;
+    return {
+      username,
+      email,
+      id: userCredential.user.uid,
+    };
   } catch (error) {
     console.log(error);
+    throw error;
   }
 };
 
-// todo : sign in user
-
+// ---------------------- SIGN IN ----------------------
 export const signInUser = createAsyncThunk(
   "users/signIn",
   async ({ email, password }) => {
@@ -39,25 +49,50 @@ export const signInUser = createAsyncThunk(
       email,
       password
     );
-    const user = {
+    return {
       email: userCredential.user.email,
       id: userCredential.user.uid,
     };
-    return user;
   }
 );
 
+// ---------------------- FETCH ALL USERS ----------------------
 export const fetchUsers = createAsyncThunk("users/fetchUsers", async () => {
-  const querySnapshot = await getDocs(collection(db, "users"));
-  const users = querySnapshot.docs.map((doc) => doc.data());
-  console.log("pass");
+  const usersRef = collection(db, "users");
+  const snapshot = await getDocs(usersRef);
+
+  const users = snapshot.docs.map((doc) => ({
+    id: doc.id,
+    ...doc.data(),
+  }));
+
   return users;
 });
 
+// ---------------------- FETCH CHAT LIST ----------------------
+export const fetchChatList = createAsyncThunk(
+  "users/fetchChatList",
+  async () => {
+    const userId = auth.currentUser.uid;
+    const chatsRef = collection(db, "users", userId, "chats");
+    const q = query(chatsRef, orderBy("timestamp", "desc"), limit(5));
+    const snapshot = await getDocs(q);
+
+    const chatUsers = snapshot.docs.map((doc) => ({
+      id: doc.id,
+      ...doc.data(),
+    }));
+
+    return chatUsers;
+  }
+);
+
+// ---------------------- SLICE ----------------------
 const initialState = {
   currentUsers: {},
   users: [],
-  isLoading: true,
+  chatList: [],
+  isLoading: false,
   error: null,
 };
 
@@ -66,29 +101,45 @@ const usersSlice = createSlice({
   initialState,
   reducers: {},
   extraReducers: (builder) => {
-    // fetch
+    // fetch users
     builder.addCase(fetchUsers.pending, (state) => {
       state.isLoading = true;
+      state.error = null;
     });
     builder.addCase(fetchUsers.fulfilled, (state, action) => {
       state.users = action.payload;
       state.isLoading = false;
     });
-    builder.addCase(fetchUsers.rejected, (state) => {
-      state.error = "user didn't fetched !";
+    builder.addCase(fetchUsers.rejected, (state, action) => {
+      state.error = action.error.message || "Failed to fetch users";
       state.isLoading = false;
     });
 
     // sign-in
     builder.addCase(signInUser.pending, (state) => {
       state.isLoading = true;
+      state.error = null;
     });
     builder.addCase(signInUser.fulfilled, (state, action) => {
       state.currentUsers = action.payload;
       state.isLoading = false;
     });
-    builder.addCase(signInUser.rejected, (state) => {
-      state.error = "user didn't fetched !";
+    builder.addCase(signInUser.rejected, (state, action) => {
+      state.error = action.error.message || "Sign in failed";
+      state.isLoading = false;
+    });
+
+    // fetch chat list
+    builder.addCase(fetchChatList.pending, (state) => {
+      state.isLoading = true;
+      state.error = null;
+    });
+    builder.addCase(fetchChatList.fulfilled, (state, action) => {
+      state.chatList = action.payload;
+      state.isLoading = false;
+    });
+    builder.addCase(fetchChatList.rejected, (state, action) => {
+      state.error = action.error.message || "Failed to fetch chat list";
       state.isLoading = false;
     });
   },
