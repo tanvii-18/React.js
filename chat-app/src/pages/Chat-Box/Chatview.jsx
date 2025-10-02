@@ -54,9 +54,9 @@ function ChatView() {
   }
 
   return (
-    <div className="flex flex-col h-full border-l border-gray-300">
+    <div className="w-150 h-full border-l border-gray-300">
       {/* Messages */}
-      <div className="flex-1 overflow-y-auto p-4 space-y-3">
+      <div className="flex-1 w-full overflow-y-auto p-4 space-y-3">
         {isLoading ? (
           <p className="text-center text-gray-500">Loading...</p>
         ) : messages.length > 0 ? (
