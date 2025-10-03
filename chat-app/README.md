@@ -34,6 +34,9 @@ Configure Firebase with your project credentials
 
 Run npm start to launch the app locally
 
+<img width="420" height="420" alt="Image" src="https://github.com/user-attachments/assets/ac4b10aa-ab13-446b-a1c7-b4bccf3a7052" />
+<img width="420" height="420" alt="Image" src="https://github.com/user-attachments/assets/6540f5a0-d5a4-4133-bb8c-bdf1ae016559" />
+
 <h3>Goal:</h3>
 To provide a smooth, real-time chat experience while learning full-stack React development and Firebase integration.
 
