@@ -1,12 +1,39 @@
-# React + Vite
+<h2>Chat Application</h2>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A real-time chat application built with React, Redux Toolkit, and Firebase, enabling users to send and receive messages instantly.
 
-Currently, two official plugins are available:
+<h3>Features:</h3>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Real-time messaging between users
 
-## Expanding the ESLint configuration
+Display of last messages in chat list
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+User authentication with Firebase Auth
+
+Responsive chat interface with messages scrolling
+
+Search users and start new chats easily
+
+Simple and clean UI built with Tailwind CSS
+
+<h3>Tech Stack:</h3>
+
+Frontend: React, Redux Toolkit, Tailwind CSS
+
+Backend/Database: Firebase Firestore & Firebase Authentication
+
+Hosting: (Optional: Firebase Hosting / Vercel)
+
+<h3>Usage:</h3>
+
+Clone the repository
+
+Install dependencies with npm install
+
+Configure Firebase with your project credentials
+
+Run npm start to launch the app locally
+
+<h3>Goal:</h3>
+To provide a smooth, real-time chat experience while learning full-stack React development and Firebase integration.
+
