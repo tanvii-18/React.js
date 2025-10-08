@@ -7,11 +7,13 @@
 .App {
   font-family: sans-serif;
   text-align: center;
-}
+} 
+
 
 body {
   background: linear-gradient(135deg, #b3dffc, #d1b3ff);
 }
+
 
 form {
   height: auto;
